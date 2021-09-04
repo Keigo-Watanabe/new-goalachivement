@@ -1,0 +1,352 @@
+/*
+レスポンシブ
+*/
+
+
+/* 1440px */
+@media screen and (min-width: 1440px) {
+  .goal-item {
+    width: 24%;
+  }
+}
+
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  /* ヘッダー */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0 1.5rem;
+  }
+
+
+  /* ホームナビゲーション */
+  .home-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0.5rem 3rem;
+    z-index: 100;
+  }
+
+  .nav-list {
+    justify-content: space-between;
+  }
+
+  .nav-list li {
+    margin-right: 0;
+    font-size: 1.2rem;
+    width: 33%;
+    text-align: center;
+  }
+
+  .nav-list li a {
+    text-align: center;
+  }
+
+  .nav-list li i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  .router-link-active {
+    border-bottom: none;
+  }
+
+
+  /* 使い方ナビゲーション */
+  .app-use-container {
+    width: 100%;
+    min-width: 100%;
+  }
+
+
+  /* ホームメイン */
+  .home-content {
+    padding: 7rem 1rem 5rem 1rem;
+  }
+
+  .add-goal-btn {
+    max-width: 100%;
+  }
+
+
+  /* モーダルウィンドウ */
+  .modal-window {
+    max-width: 100%;
+    height: 90%;
+    top: 10%;
+    left: 0;
+    bottom: 0;
+    transform: translate(0);
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+
+  /* 目標一覧 */
+  .goal-item {
+    width: 100%;
+  }
+
+
+  /* 目標詳細ページ */
+  .goal-show-container {
+    flex-direction: column;
+  }
+
+
+  /* 目標詳細セクション */
+  .goal-detail-section {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+
+  /* 目標タスク一覧セクション */
+  .goal-task-list-section {
+    overflow-y: visible;
+    min-height: 30rem;
+  }
+
+  .goal-task-list-section-inner {
+    min-width: 100%;
+  }
+
+  .goal-task-list-nav {
+    margin-bottom: 1.5rem;
+  }
+
+  .gantchart-btn {
+    margin-right: 1.5rem;
+  }
+
+  .goal-task-list-head {
+    display: none;
+  }
+
+  .task-item-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-tag-space,
+  .task-progress-space {
+    width: 100%;
+  }
+
+  .task-progress-space {
+    align-items: center;
+  }
+
+  .task-item-category-space,
+  .task-priority-space {
+    min-width: 0;
+  }
+
+  .task-item-category-space,
+  .task-item-start-space,
+  .task-item-end-space,
+  .task-item-priority-space {
+    width: fit-content;
+  }
+
+  .task-date-responsive {
+    display: block !important;
+  }
+
+  .task-start-space,
+  .task-end-space {
+    min-width: auto;
+  }
+
+  .task-item-status-space {
+    width: 100%;
+  }
+
+  .task-item-status-space span {
+    margin: 0 1.5rem 0 auto;
+  }
+
+  .task-category,
+  .task-priority,
+  .task-severity {
+    white-space: nowrap;
+  }
+
+  .task-item-category-space {
+    margin-right: 0.5rem;
+  }
+
+  .task-priority,
+  .task-severity {
+    margin: 0 0.5rem 0 0;
+  }
+
+
+  /* タスク一覧ページ */
+  .task-container {
+    flex-direction: column;
+  }
+
+  .task-nav-box {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0%);
+    transition: .3s;
+  }
+
+  .task-nav-responsive-open {
+    top: 5rem;
+    transition: .3s;
+  }
+
+  .task-nav-responsive-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .task-nav-responsive-close i {
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .task-nav-responsive-close i:hover {
+    opacity: 0.7;
+  }
+
+  .matrix-btn {
+    margin-right: 1.5rem;
+  }
+
+  .task-list-section-title {
+    display: none;
+  }
+
+  .task-list-responsive-bar {
+    display: block;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .task-list-responsive-bar:hover {
+    opacity: 0.7;
+  }
+
+
+  /* タスクマトリクス */
+  .task-matrix-nav-section {
+    margin-bottom: 2rem;
+  }
+
+  .task-nav-matrix-box {
+    min-width: auto;
+    margin-right: 0;
+  }
+
+  .task-matrix-name span {
+    font-size: 1.2rem;
+  }
+
+  .sort-title-responsive {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+
+  /* カレンダーページ */
+  .calendar-container {
+    flex-direction: column;
+  }
+
+  .calendar-section {
+    margin-bottom: 2rem;
+  }
+
+  .calendar {
+    width: 100%;
+    min-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .schedule-list-container {
+    min-width: 100%;
+  }
+
+  .schedule-list-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .schedule-list-nav {
+    display: none;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+  }
+
+  .schedule-item-schedule-space {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .schedule-item-category-time-space {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .schedule-item-category-box {
+    padding-left: 1rem;
+  }
+
+  .schedule-item-time {
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  .schedule-item-category {
+    margin: 0;
+  }
+
+
+  /* 使い方ページ */
+  .use-nav-section {
+    display: none;
+  }
+
+  .use-description-section {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .use-description-question p {
+    font-size: 1.6rem;
+  }
+
+  .use-description-answer p {
+    font-size: 1.4rem;
+  }
+
+
+  /* プロフィールページ */
+  .profile-container {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}

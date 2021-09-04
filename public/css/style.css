@@ -1,0 +1,1874 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: transparent;
+}
+
+.home-container {
+  background: #FFFEF5;
+  min-height: 100vh;
+}
+
+
+/*
+ホームヘッダー
+*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 3rem;
+  background: #f7f7f7;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.logo-img img {
+  width: 100%;
+}
+
+.goal-achivement-jp {
+  color: #4D6790;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+.goal-achivement-en {
+  font-size: 1.2rem;
+  font-family: 'Alata', sans-serif;
+  line-height: 1;
+}
+
+.header-setting {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header-setting i {
+  color: #4D6790;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.setting-icon, .user-icon {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.setting-icon:hover, .user-icon:hover {
+  opacity: 0.7;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.profile-dropdown a {
+  display: block;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+}
+
+.profile-btn {
+  border-bottom: solid 0.1rem #e8e8e8;
+}
+
+.logout-btn {
+  cursor: pointer;
+}
+
+
+
+/*
+使い方ナビゲーション
+*/
+.app-use-container-bg {
+  transition: .3s;
+  transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slide {
+  transform: translateX(0);
+}
+
+.app-use-container {
+  background: #fff;
+  height: 100%;
+  width: 50%;
+  min-width: 50rem;
+  overflow: auto;
+}
+
+.app-use-title-content {
+  padding: 1.5rem 2rem;
+  border-bottom: solid 0.1rem #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-use-title span {
+  font-size: 1.4rem;
+}
+
+.app-use-close-btn {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.app-use-close-btn:hover {
+  opacity: 0.7;
+}
+
+.app-use-section-list {
+  padding: 1.5rem 2rem;
+}
+
+.app-use-section-item {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.app-use-list {
+  padding: 1rem 0 2rem 0;
+  list-style: inside;
+}
+
+.app-use-item {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  transition: .3s;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.app-use-item:hover {
+  text-decoration: none;
+  color: #0090ff;
+}
+
+
+
+/*
+ホームナビゲーション
+*/
+.home-nav {
+  background: #FFFEF5;
+  padding: 1.5rem 3rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li {
+  margin-right: 4rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav-list li:hover {
+  color: #4D6790;
+}
+
+.nav-list li i {
+  margin-right: 0.5rem;
+}
+
+.router-link-active {
+  color: #4D6790;
+  font-weight: bold;
+  border-bottom: solid 0.2rem #4D6790;
+}
+
+
+
+/*
+ホームメイン
+*/
+.home-content {
+  padding: 2rem 3rem;
+}
+
+.add-goal-btn {
+  background: #4D6790;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  max-width: 30rem;
+  transition: .3s;
+}
+
+.add-goal-btn:hover {
+  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 20%);
+  opacity: 0.9;
+}
+
+.goal-list-title {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.goal-title {
+  font-weight: bold;
+}
+
+.sort-btn {
+  transition: .3s;
+  font-size: 1.4rem;
+}
+
+.sort-btn:hover {
+  opacity: 0.7;
+}
+
+.sort-btn i {
+  margin-right: 0.5rem;
+}
+
+.sort-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.sort-dropdown a {
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sort-dropdown a:hover {
+  opacity: 0.7;
+}
+
+.sort-dropdown a:first-child {
+  border-bottom: solid 0.1rem #D8D8D8;
+}
+
+
+
+/*
+モーダルウィンドウ
+*/
+.modal-window-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 40%);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.modal-window-title {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  border-bottom: solid 0.1rem #333;
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.close-modal-btn i {
+  font-size: 2rem;
+}
+
+.modal-input {
+  border-bottom: solid 0.1rem #333;
+  display: flex;
+  align-items: center;
+}
+
+.modal-input i {
+  margin: 0 1rem;
+}
+
+.modal-input .fa-flag {
+  color: #FF5C5C;
+}
+
+.modal-input .fa-calendar-alt {
+  color: #F5732E;
+}
+
+.modal-input input {
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  padding: 1.5rem 1rem;
+}
+
+.modal-btn {
+  padding: 1.5rem;
+}
+
+.modal-btn button {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  transition: .3s;
+  color: #fff;
+}
+
+.add-modal-btn {
+  background: #4D6790;
+}
+
+.modal-btn button:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  opacity: 0.9;
+}
+
+.edit-modal-btn {
+  background: #4D6790;
+  margin-bottom: 1rem;
+}
+
+.delete-modal-btn {
+  background: #FF6969;
+}
+
+
+/*
+エラーメッセージ
+*/
+.error-message {
+  padding: 1rem;
+  border-bottom: solid 0.1rem #333;
+  background: #ffc6c6;
+}
+
+.error-message-item {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff2b2b;
+}
+
+
+
+/*
+目標一覧
+*/
+.goal-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goal-list::after {
+  content: '';
+  display: block;
+  width: 32%;
+}
+
+.goal-item {
+  width: 32%;
+  border: solid 0.2rem #808080;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.goal-item:hover {
+  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.goal-name {
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.goal-date {
+  margin: 0.5rem 0;
+}
+
+.goal-date,
+.goal-status {
+  color: #808080;
+  font-size: 1.2rem;
+}
+
+.goal-item-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-task-setting {
+  border-bottom: solid 0.1rem #808080;
+}
+
+.goal-task {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.goal-setting {
+  transition: .3s;
+}
+
+.goal-setting:hover {
+  opacity: 0.7;
+}
+
+.goal-progress {
+  padding-top: 0.5rem;
+}
+
+.goal-progress-per {
+  color: #FF6F6F;
+  font-size: 1.2rem;
+}
+
+.goal-status-achivement {
+  color: #FF6200;
+  font-weight: bold;
+}
+
+.goal-status-achivement i {
+  margin-right: 0.5rem;
+}
+
+.no-goals {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+
+/*
+目標詳細ページ
+*/
+.goal-show-container {
+  display: flex;
+}
+
+
+/* 目標詳細セクション */
+.goal-detail-section {
+  min-width: 30rem;
+  margin-right: 4.5rem
+}
+
+.goal-show-back {
+  margin-bottom: 1rem;
+}
+
+.back-goal-list {
+  font-size: 1.4rem;
+  transition: .3s;
+}
+
+.back-goal-list i {
+  margin-right: 1rem;
+}
+
+.back-goal-list:hover {
+  opacity: 0.7;
+}
+
+.goal-show-detail {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  padding: 1.5rem;
+}
+
+.goal-show-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.goal-show-date {
+  font-size: 1.4rem;
+}
+
+.goal-show-day {
+  text-align: right;
+  font-size: 1.4rem;
+  margin: 0.8rem 0;
+}
+
+.goal-show-day-num {
+  font-size: 1.6rem;
+  color: #FF6E6E;
+  font-weight: bold;
+}
+
+.goal-progress-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goal-progress-label span {
+  font-size: 1.2rem;
+}
+
+.goal-progress-bar {
+  width: 100%;
+  height: 2rem;
+  border-radius: 1rem;
+  border: solid 0.1rem #C3C3C3;
+  background: #F4FAFF;
+  padding: 0.1rem;
+}
+
+.goal-progress-bar-inner {
+  display: block;
+  height: 100%;
+  background: #5484D1;
+  border-radius: 1rem;
+  transition: .3s;
+}
+
+.goal-progress-status {
+  color: #FF6E6E;
+  font-size: 1.4rem;
+}
+
+.goal-show-task {
+  margin: 4rem 0;
+}
+
+.goal-show-task-list li {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task-btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  background: #4D6790;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  transition: .3s;
+}
+
+.add-task-btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+/* タスクモーダルウィンドウ */
+.modal-input .fa-tasks {
+  color: #3AB7B2;
+}
+
+.input-date {
+  white-space: nowrap;
+}
+
+.tag-content {
+  height: 1.6rem;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.task-tag-label {
+  padding: 0.4rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  display: block;
+}
+
+.task-tag-label i {
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.task-tag-label i:hover {
+  color: #333;
+}
+
+.priority-label {
+  background: #FFB371;
+}
+
+.severity-label {
+  background: #E63B3B;
+}
+
+.modal-input .fa-tags {
+  color: #BB89FF;
+  cursor: pointer;
+}
+
+.modal-input .fa-pen {
+  color: #808080;
+}
+
+.modal-input textarea {
+  border: none;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+
+/* タグモーダルウィンドウ */
+.add-tag-content {
+  padding: 1rem;
+}
+
+.tag-label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.category-list {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-item,
+.category-item-show {
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-item {
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+}
+
+.category-item-inner {
+  display: flex;
+  align-items: center;
+}
+
+.category-item-inner .fa-check-circle {
+  margin-right: 0.5rem;
+}
+
+.category-item .fa-pen {
+  margin-left: 1rem;
+  transition: .3s;
+}
+
+.category-item .fa-pen:hover {
+  color: #333;
+}
+
+.category-item:hover {
+  opacity: 0.9;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.edit-category-form {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: solid 0.1rem #f7f7f7;
+  border-bottom: solid 0.1rem #f7f7f7;
+}
+
+.edit-category-form input {
+  width: 100%;
+  display: block;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-delete-btn {
+  background: #FF6969;
+}
+
+.add-category-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  background: #95D6FF;
+  border-radius: 1rem;
+  transition: .3s;
+  margin-bottom: 1rem;
+}
+
+.add-category-btn:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  opacity: 0.9;
+}
+
+.add-category-form input {
+  width: 100%;
+  display: block;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-item {
+  border: solid 0.1rem #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.color-item:hover {
+  border: solid 0.1rem #95D6FF;
+}
+
+.category-form-btn {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.category-form-btn button {
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.category-form-btn button:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  opacity: 0.9;
+}
+
+.category-cancel-btn {
+  background: #808080;
+}
+
+.category-add-btn {
+  background: #4D6790;
+}
+
+.priority-select button {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.priority-select button:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.priority-btn {
+  border: solid 0.2rem #FFB371;
+}
+
+.severity-btn {
+  border: solid 0.2rem #E63B3B;
+}
+
+.selected-priority {
+  background: #FFB371;
+}
+
+.selected-severity {
+  background: #E63B3B;
+}
+
+.cancel-modal-btn {
+  background: #808080;
+  margin-bottom: 0.5rem;
+}
+
+/* 目標タスク一覧セクション */
+.goal-task-list-section {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.goal-task-list-section-inner {
+  min-width: 73.5rem;
+}
+
+.goal-task-list-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.goal-task-list-title {
+  font-weight: bold;
+}
+
+.goal-task-select {
+  position: relative;
+}
+
+.gantchart-btn {
+  margin-right: 3rem;
+  transition: .3s;
+  font-size: 1.4rem;
+}
+
+.gantchart-btn:hover {
+  opacity: 0.7;
+}
+
+.gantchart-btn i {
+  margin-right: 0.5rem;
+}
+
+.task-sort-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  padding: 0 1rem;
+}
+
+.task-sort-dropdown a {
+  cursor: pointer;
+  display: block;
+  padding: 0.8rem 1rem;
+  font-size: 1.4rem;
+  transition: .3s;
+}
+
+.task-sort-dropdown a:nth-child(3) {
+  border-top: solid 0.1rem #d8d8d8;
+  border-bottom: solid 0.1rem #d8d8d8;
+}
+
+.task-sort-dropdown a:hover {
+  opacity: 0.7;
+}
+
+.category-dropdown-btn i {
+  margin-left: 2rem;
+  transition: .3s;
+}
+
+.category-dropdown-list {
+  padding-bottom: 1rem;
+}
+
+.category-dropdown-item {
+  font-size: 1.2rem;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.category-dropdown-item:hover {
+  opacity: 0.7;
+}
+
+.category-dropdown-item i {
+  margin-right: 0.5rem;
+}
+
+.goal-task-list-head {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 0.1rem #333;
+}
+
+.goal-task-list-head span {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.task-category-space,
+.task-start-space,
+.task-end-space,
+.task-status-space {
+  width: 10%;
+  min-width: 7rem
+}
+
+.task-name-space {
+  width: 40%;
+  min-width: 28rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.task-priority-space {
+  width: 20%;
+  min-width: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+.goal-task-list-item {
+  display: flex;
+  align-items: center;
+  border: solid 0.1rem #333;
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: .3s;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.goal-task-list-item:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.goal-task-list-item span {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.check-space {
+  display: flex;
+  align-items: center;
+  width: 5%;
+  min-width: 3.5rem;
+}
+
+.check-space i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.task-item-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.task-tag-space,
+.task-progress-space {
+  display: flex;
+  width: 30%;
+}
+
+.task-item-category-space,
+.task-item-start-space,
+.task-item-end-space,
+.task-item-status-space {
+  width: 33%;
+}
+
+.task-item-priority-space {
+  width: 66%;
+}
+
+.task-date-responsive {
+  display: none !important;
+}
+
+.is-not-complete {
+  color: #808080;
+}
+
+.is-complete {
+  color: #91E5B5;
+}
+
+.task-category,
+.task-priority,
+.task-severity {
+  color: #fff;
+  border-radius: 1rem;
+  padding: 0.1rem 0.8rem;
+}
+
+.task-category {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.task-priority {
+  background: #FFB371;
+  margin: 0 0.3rem;
+}
+
+.task-severity {
+  background: #E63B3B;
+  margin: 0 0.3rem;
+}
+
+.task-status-space span {
+  width: fit-content;
+  padding: 0.1rem 0.4rem;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.task-not-done {
+  background: #D8D8D8;
+}
+
+.task-doing {
+  background: #91C8E5;
+}
+
+.task-done {
+  background: #91E5B5;
+}
+
+/* ! */
+.goal-task-list-item .task-name-space {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.no-tasks {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+
+
+/*
+ガントチャート
+*/
+.back-goal-show {
+  font-size: 1.4rem;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.back-goal-show i {
+  margin-right: 1rem;
+}
+
+.back-goal-show:hover {
+  opacity: 0.7;
+}
+
+.gantchart-goal-detail {
+  margin: 2.5rem 0;
+}
+
+.gantchart-goal-name {
+  font-weight: bold;
+  margin-right: 6rem;
+  white-space: nowrap;
+}
+
+.gantchart-goal-date {
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+.gantchart-container {
+  display: flex;
+}
+
+.gantchart-tasks {
+  min-width: 30rem;
+}
+
+.gantchart-tasks-title {
+  background: #f7f7f7;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 0.1rem #d8d8d8;
+}
+
+.gantchart-tasks-title span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.gantchart-task-list {
+  padding: 0 1rem;
+  background: #fff;
+  border-right: solid 0.1rem #d8d8d8;
+}
+
+.gantchart-task-item {
+  font-size: 1.4rem;
+  border-bottom: solid 0.1rem #d8d8d8;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.gantchart-table-box {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.gantchart-table-date {
+  display: flex;
+}
+
+.gantchart-table-date th {
+  font-size: 1.2rem;
+  background: #f7f7f7;
+  min-width: 7rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 0.1rem #d8d8d8;
+}
+
+.gantchart-today {
+  display: block;
+  width: 100%;
+  color: #ff3d3d;
+}
+
+.gantchart-table-graph {
+  background: #FAFDFF;
+  display: flex;
+}
+
+.gantchart-table-graph td {
+  min-width: 7rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border-right: dashed 0.1rem #d8d8d8;
+}
+
+.gantchart-bar {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  background: #FA9797;
+}
+
+
+
+/*
+タスク一覧ページ
+*/
+.task-container {
+  display: flex;
+}
+
+.task-nav-box {
+  min-width: 30rem;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  margin-right: 4.5rem;
+  border-radius: 0.5rem;
+}
+
+.task-nav-section-title {
+  border-bottom: solid 0.1rem #333;
+}
+
+.task-nav-section-title span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.task-nav-section-ul {
+  padding: 1rem 0 2rem 0;
+}
+
+.task-nav-section-item {
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: .3s;
+}
+
+.task-nav-section-item:hover {
+  opacity: 0.7;
+}
+
+.task-nav-section-item i {
+  margin-right: 0.5rem;
+}
+
+.task-list-responsive-bar {
+  display: none;
+}
+
+.task-nav-responsive-close {
+  display: none;
+}
+
+.matrix-btn {
+  font-size: 1.4rem;
+  margin-right: 3rem;
+  transition: .3s;
+}
+
+.matrix-btn i {
+  margin-right: 0.5rem;
+}
+
+.matrix-btn:hover {
+  opacity: 0.7;
+}
+
+.sort-btn-down {
+  border-bottom: solid 0.1rem #d8d8d8;
+}
+
+
+
+/*
+タスクマトリクスページ
+*/
+.back-task-list {
+  margin-bottom: 1rem;
+}
+
+.back-task-list-btn {
+  font-size: 1.4rem;
+  transition: .3s;
+}
+
+.back-task-list-btn i {
+  margin-right: 1rem;
+}
+
+.back-task-list-btn:hover {
+  opacity: 0.7;
+}
+
+.task-nav-matrix-box {
+  min-width: 38rem;
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  margin-right: 4.5rem;
+  border-radius: 0.5rem;
+}
+
+.task-matrix-nav-title {
+  margin-bottom: 1rem;
+}
+
+.task-matrix-nav-title span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.task-matrix-ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.task-matrix-item {
+  width: 49%;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.task-matrix-item:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.task-matrix-item-a {
+  background: #FFACAC;
+}
+
+.task-matrix-item-b {
+  background: #FFAD90;
+}
+
+.task-matrix-item-c {
+  background: #FFC993;
+}
+
+.task-matrix-item-d {
+  background: #FFF7BE;
+}
+
+.task-matrix-abcd span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.task-matrix-a {
+  background: #FF4D4D;
+}
+
+.task-matrix-b {
+  background: #FF5519;
+}
+
+.task-matrix-c {
+  background: #FF860D;
+}
+
+.task-matrix-d {
+  background: #FFC400;
+}
+
+.task-matrix-name {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.task-matrix-name span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.task-matrix-num {
+  text-align: center;
+}
+
+.task-matrix-num span {
+  font-size: 1.2rem;
+}
+
+.sort-title-responsive {
+  display: none;
+}
+
+
+
+/*
+カレンダーセクション
+*/
+.calendar-container {
+  display: flex;
+}
+
+.calendar {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  padding: 1.5rem;
+  width: 50%;
+  min-width: 63rem;
+  margin-right: 4rem;
+}
+
+.calendar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.calendar-title button {
+  font-size: 1.2rem;
+  transition: .3s;
+}
+
+.calendar-title button:hover {
+  opacity: 0.7;
+}
+
+.calendar-title button i {
+  margin: 0 0.5rem;
+}
+
+.this-month {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.calendar-table {
+  width: 100%;
+}
+
+.week {
+  border-bottom: solid 0.1rem #333;
+  width: 100%;
+}
+
+.saturday {
+  color: #1F53FF;
+}
+
+.sunday,
+.holiday {
+  color: #FF3E3E;
+}
+
+.week td {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 8.5rem;
+  overflow: hidden;
+}
+
+.week-days {
+  height: 5rem;
+}
+
+.week td a {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.today .day-num {
+  background: #ff3d3d;
+  color: #fff;
+  display: block;
+}
+
+
+/*
+予定一覧セクション
+*/
+.schedule-list-section {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.schedule-list-container {
+  min-width: 53rem;
+}
+
+.schedule-date {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.add-schedule-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #4D6790;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: .3s;
+}
+
+.add-schedule-btn:hover {
+  box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 20%);
+  opacity: 0.9;
+}
+
+.modal-input .fa-clipboard-list {
+  color: #48bcb7;
+}
+
+.modal-input .fa-clock {
+  color: #f5732d;
+}
+
+.schedule-list-nav {
+  display: flex;
+  border-bottom: solid 0.1rem #333;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-list-nav span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.schedule-list-nav-schedule {
+  width: 60%;
+}
+
+.schedule-list-nav-category {
+  width: 20%;
+}
+
+.schedule-list-nav-time {
+  width: 20%;
+}
+
+.schedule-item {
+  background: #fff;
+  padding: 1rem 0;
+  border: solid 0.1rem #333;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.schedule-item:hover {
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.schedule-item-schedule-space {
+  width: 60%;
+  padding-left: 1rem;
+}
+
+.schedule-item-schedule {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.schedule-item-category-time-space {
+  display: flex;
+  width: 40%;
+}
+
+.schedule-item-category-box {
+  width: 50%;
+}
+
+.schedule-item-category {
+  display: block;
+  width: fit-content;
+  padding: 0.1rem 0.8rem;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+.schedule-item-time {
+  width: 50%;
+  display: block;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.no-schedule {
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+
+/*
+サービスの使い方ページ
+*/
+.use-container {
+  display: flex;
+}
+
+.use-nav-container {
+  width: 30%;
+  min-width: 35rem;
+  background: #fff;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.use-description-section {
+  background: #fff;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+  margin-top: 3.5rem;
+  margin-left: 4rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+.use-description-question {
+  border-bottom: solid 0.2rem #333;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.use-description-question p {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.use-description-question p i {
+  margin-right: 1rem;
+  color: #D8D8D8;
+}
+
+.use-description-answer {
+  background: #FFFEF5;
+  padding: 1.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 20%);
+}
+
+.answer-p {
+  font-weight: bold;
+}
+
+.answer-p i {
+  color: #FFDD4E;
+  margin-right: 1rem;
+}
+
+.use-description-list {
+  margin-top: 2rem;
+  list-style: decimal inside;
+}
+
+.use-description-item {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.use-matrix-list {
+  margin-top: 2rem;
+  list-style: upper-alpha inside;
+}
+
+.use-matrix-item {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.alert-description {
+  font-size: 1.4rem;
+  color: #ff2d2d;
+}
+
+.use-description-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1.5rem 0 1rem 0;
+  display: block;
+}
+
+.description-p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.description-link {
+  text-decoration: underline;
+  color: #0090ff;
+  transition: .3s;
+}
+
+.description-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.use-image {
+  display: block;
+  width: 60%;
+  margin: 1rem auto;
+}
+
+.use-movie-container {
+  margin-top: 3rem;
+}
+
+.use-movie {
+  width: 100%;
+}
+
+.use-movie-container p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+
+
+/* プロフィールページ */
+.form-section-title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.form-section-description {
+  font-size: 1.4rem;
+}
+
+.two-factor-title {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.two-factor-description {
+  font-size: 1.4rem;
+}
+
+.delete-account-description {
+  font-size: 1.4rem;
+}
+
+.danger-btn {
+  font-size: 1.4rem;
+}
+
+.profile-modal {
+  padding-top: 7rem;
+}
+
+.delete-account-model-title {
+  font-weight: bold;
+}
+
+.delete-account-modal-description {
+  font-size: 1.4rem;
+}
+
+.delete-account-cancel-btn {
+  font-size: 1.4rem;
+}
+
+.profile-form-btn {
+  margin: 1.5rem 0;
+}
+
+.input-error-message {
+  font-size: 1.4rem;
+  color: #ff2b2b;
+}
+
+.action-message-text {
+  font-size: 1.4rem;
+  color: #57c69f;
+  font-weight: bold;
+}
+
+.qr-code-text {
+  font-size: 1.4rem;
+}
