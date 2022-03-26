@@ -19,7 +19,7 @@
       </div>
 
       <div class="use-movie-container">
-        <video class="use-movie" autoplay loop>
+        <video class="use-movie" autoplay loop muted playsinline>
           <source src="/movies/use1.mov">
         </video>
       </div>
